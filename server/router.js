@@ -20,5 +20,6 @@ data.save().then(()=>{
 router.delete("/",()=>{
     const id=req.body
     connect.deleteOne(id)
+    console.log("data is supremer")
 })
 module.exports=router
