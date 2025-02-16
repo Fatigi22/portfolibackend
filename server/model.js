@@ -1,8 +1,21 @@
-const mongoose=require("mongoose")
-const Db= mongoose.model("User",{
-Email:string ,
-Password:string,
-téléphone:Number,
-message:string
+const mongoose =require("mongoose")
+const db =new mongoose.Schema({
+    name:{
+        type:String,
+        required:true
+    },
+    email:{
+        type:String,
+        required:true
+    },
+    phone:{
+        type:Number,
+        required:true
+    },
+message:{
+    type:String,
+    required:true
+}
 })
-export default Db;
+const data =mongoose.model("contacet",db)
+module.exports=data
